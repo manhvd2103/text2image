@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hong An Render</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 190px;
+            width: 300px;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        a {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+          <h2>Upload Images</h2>
+          <p>Upload lofi or chill-hiphop music youtube thumbnails for model training</p>
+          <a href="{{ url_for('upload')}}" style="text-decoration: none">UPLOAD</a>
+        </div>
+        <div class="card">
+          <h2>Generate Images</h2>
+          <p>Generate lofi or chill-hiphop thumbnail with full-hd resolution</p>
+          <a href="{{ url_for('render') }}" style="text-decoration: none">GENERATE</a>
+        </div>
+    </div>
+</body>
+</html>
