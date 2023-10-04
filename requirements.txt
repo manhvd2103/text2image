@@ -1,0 +1,9 @@
+torch
+transformers
+diffusers
+opencv-python
+basicsr
+omegaconf
+accelerate
+flask
+pynvml
