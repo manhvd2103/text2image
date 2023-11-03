@@ -82,42 +82,41 @@
             <section class="featured-section">
                 <div class="container">
                     <div class="row justify-content-center">
-
                         <div class="col-lg-4 col-12 mb-4 mb-lg-0">
                             <div class="custom-block bg-white shadow-lg">
                                     <div class="d-flex">
                                         <div>
                                             <h5 class="mb-2">Notes</h5>
-
                                             <p class="mb-0">When you generate image you should add types of thumnail images in the first of sentence. Example: [Relax] Prompts ...</p>
                                             <p class="mb-0">You can save image by right click on the image and save.</p>
                                         </div>
                                     </div>
-
                                     <img src="static/images/notes.jpg" class="custom-block-image img-fluid" alt="">
                             </div>
                         </div>
-                        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                            <div class="custom-block bg-white shadow-lg">
-                                    <div class="d-flex">
+                        <div class="col-lg-6 col-12">
+                            <div class="custom-block custom-block-overlay">
+                                <div class="d-flex flex-column h-100">
+                                    <div class="custom-block-overlay-text d-flex">
                                         <div>
-                                            <h5 class="mb-2">Image Infomation</h5>
+                                            <h5 class="text mb-2">Generated Image Infomation</h5>
                                             {% if prompts %}
-                                                <p class="mb-0" style="word-wrap: break-word;">Prompt: {{ prompts }}</p>
+                                                <p class="text-white">
+                                                    Your prompt: {{ prompts }}
+                                                </p>
                                             {% endif %}
                                             {% if warns %}
-                                                <p class="mb-0" style="word-wrap: break-word;">
-                                                    Please wait some while. You can save this link and download images in some minute ago.
+                                                <p class="text-white">
+                                                    {{ warns }}
                                                 </p>
                                             {% endif %}
                                             {% if link %}
-                                                <p class="mb-0" style="word-wrap: break-word;">Link: {{ link }}</p>
+                                                <p class="text-white">Download link: <a href="{{ link }}">{{ link }}</a></p>
                                             {% endif %}
                                         </div>
                                     </div>
-                                    {% if img_path %}
-                                        <img src="{{ img_path }}" alt="" class="custom-block-image img-fluid">
-                                    {% endif %}
+                                    <div class="section-overlay"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

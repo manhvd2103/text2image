@@ -7,3 +7,5 @@ omegaconf
 accelerate
 flask
 pynvml
+flask-cors
+
